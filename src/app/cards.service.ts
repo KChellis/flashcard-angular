@@ -13,4 +13,8 @@ export class CardsService {
     return this.cardList;
   }
 
+  addCard(newCard) {
+    this.cardList.push(newCard);
+  }
+
 }

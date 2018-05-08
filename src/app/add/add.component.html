@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Card</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Term:</label>
+        <br>
+        <input #newTerm>
+      </div>
+
+      <div>
+        <label>Definition:</label>
+        <br>
+        <textarea #newDefinition></textarea>
+      </div>
+
+      <div>
+        <label>Course:</label>
+        <br>
+        <select #newSection>
+          <option [value]="intro">Intro to Programming</option>
+          <option [value]="javascript">Javascript</option>
+        </select>
+      </div>
+      <button (click)="submitForm(newTerm.value, newDefinition.value, newSection.value)">Add</button>
+    </div>
+  </div>
+</div>

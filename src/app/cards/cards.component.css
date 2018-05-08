@@ -2,7 +2,7 @@
   height: 250px;
   overflow: auto;
   margin-left: 50px;
-  /*background-image: url("../assets/card.jpg");*/
+  background-image: url("https://raw.githubusercontent.com/KChellis/flashcard-angular/master/src/assets/card.jpg");
   background-repeat: no-repeat;
 }
 
