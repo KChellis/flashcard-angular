@@ -1,0 +1,15 @@
+<h2>Quiz Time!</h2>
+<div *ngIf="start===false">
+  <select (change)="onChange($event.target.value)">
+      <option value="" selected>All</option>
+      <option value="intro">Intro to programming</option>
+      <option value="javascript">JavaScript</option>
+  </select>
+  <button (click)="getQuestion()">Start</button>
+</div>
+
+<div *ngIf="start===true" class="panel">
+  <h2 (click)="showDefinition(selectedCard)" class="panel-title">{{selectedCard.term}}</h2>
+  <p *ngIf="selectedCard.show === true" class="panel-body">{{selectedCard.definition}}</p>
+  <button class="next" (click)="getQuestion()">Next </button>
+</div>

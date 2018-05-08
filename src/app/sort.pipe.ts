@@ -13,7 +13,7 @@ export class SortPipe implements PipeTransform {
       if(filter) {
         for(var i = 0; i < input.length; i++) {
           if(input[i].section === filter){
-            results.push(input[i])
+            results.push(input[i]);
           }
         }
         return results;
