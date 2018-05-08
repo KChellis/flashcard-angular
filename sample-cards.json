@@ -1,0 +1,17 @@
+{ "cards": [{
+    "term": "Operators",
+    "definition": "JavaScript operators are used to assign values, compare values, perform arithmetic operations, and more.",
+    "section": "Intro",
+    "show": false
+    }, {
+    "term": "Variables",
+    "definition": "JavaScript variables are containers for storing data values.",
+    "section": "Intro",
+    "show": false
+    }, {
+    "term": "Function",
+    "definition": "A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.",
+    "section": "Intro",
+    "show": false
+  }]
+}
