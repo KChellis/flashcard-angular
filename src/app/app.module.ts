@@ -12,6 +12,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AddComponent } from './add/add.component';
 import { EditComponent } from './edit/edit.component';
+import { SortPipe } from './sort.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     AppComponent,
     CardsComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,

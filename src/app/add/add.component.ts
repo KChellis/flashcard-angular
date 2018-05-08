@@ -15,10 +15,15 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(term: string, definition: string, section: string){
-    let newCard = new Card(term, definition, section);
+  submitForm(term: string, definition: string, section){
+    let course: string;
+    if(section === "1") {
+      course = 'intro';
+    }else if(section === "2") {
+      course = 'javascript';
+    }
+    let newCard = new Card(term, definition, course);
     this.cardsService.addCard(newCard);
   }
 
 }
- 

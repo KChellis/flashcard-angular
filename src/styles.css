@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #bad0e0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Cabin Sketch', serif;
+  font-size: 58px;
+}
+
+select {
+  margin: 3px;
+}

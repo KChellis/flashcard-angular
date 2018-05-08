@@ -25,4 +25,12 @@ export class EditComponent implements OnInit {
     }
   }
 
+  editCard(card) {
+    card.show = false;
+    this.cardsService.editCard(card);
+  }
+
+  deleteCard(card) {
+    this.cardsService.deleteCard(card);
+  }
 }

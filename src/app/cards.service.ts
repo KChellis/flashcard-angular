@@ -16,5 +16,18 @@ export class CardsService {
   addCard(newCard) {
     this.cardList.push(newCard);
   }
+  getSingleCard(cardId) {
+    return this.database.object('cards/' + cardId)
+  }
+
+  editCard(card) {
+    let cardEntry = this.getSingleCard(card.$key);
+    cardEntry.update(card);
+  }
+
+  deleteCard(card) {
+    let cardEntry = this.getSingleCard(card.$key);
+    cardEntry.remove();
+  }
 
 }

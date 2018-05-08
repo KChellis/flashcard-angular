@@ -1,5 +1,10 @@
+<select (change)="onChange($event.target.value)">
+    <option value="" selected>All</option>
+    <option value="intro">Intro to programming</option>
+    <option value="javascript">JavaScript</option>
+</select>
 <div class="row">
-  <div *ngFor="let card of cardList | async" (click)="showDefinition(card)" class="panel col-xs-5">
+  <div *ngFor="let card of cardList | sort:filter" (click)="showDefinition(card)" class="panel col-xs-5">
     <h2 class="panel-title">{{card.term}}</h2>
     <p *ngIf="card.show === true" class="panel-body">{{card.definition}}</p>
   </div>

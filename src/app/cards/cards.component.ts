@@ -10,11 +10,18 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [CardsService]
 })
 export class CardsComponent implements OnInit {
-  cardList: FirebaseListObservable<any[]>;
+  cardList = [];
+  filter: string;
+
   constructor(private cardsService: CardsService) { }
 
   ngOnInit() {
-    this.cardList = this.cardsService.getCards();
+    this.cardsService.getCards().subscribe(data => {
+      for(var i =0; i< data.length; i++) {
+        let card = new Card (data[i].term, data[i].definition, data[i].section);
+        this.cardList.push(card);
+      }
+    });
   }
 
   showDefinition(card) {
@@ -24,6 +31,10 @@ export class CardsComponent implements OnInit {
       card.show = true;
     }
 
+  }
+
+  onChange(input) {
+    this.filter = input;
   }
 
 }

@@ -1,10 +1,16 @@
+<h3>Select a card to edit</h3>
 <div *ngFor="let card of cardList | async">
-  <h2 (click)="showEdit(card)">{{card.term}}</h2>
-  <div *ngIf="card.sort === true">
-    <input [(ngModel)]="card.term">
-    <input [(ngModel)]="card.definition"><br>
+  <h4 (click)="showEdit(card)">{{card.term}}</h4>
+  <div *ngIf="card.show === true">
+    <label>Term:</label><br>
+    <input [(ngModel)]="card.term"><br>
+    <label>Definition:</label><br>
+    <textarea [(ngModel)]="card.definition"></textarea><br>
+    <label>Course:</label><br>
     <input type="radio" [(ngModel)]="card.section" value="intro">Intro to Programming<br>
     <input type="radio" [(ngModel)]="card.section" value="javascript">JavaScript<br>
+    <button (click)="editCard(card)">Save Changes</button>
+    <button (click)="deleteCard(card)">Delete</button>
   </div>
 
 </div>

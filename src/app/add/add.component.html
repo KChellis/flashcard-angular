@@ -20,8 +20,8 @@
         <label>Course:</label>
         <br>
         <select #newSection>
-          <option [value]="intro">Intro to Programming</option>
-          <option [value]="javascript">Javascript</option>
+          <option [value]="1">Intro to Programming</option>
+          <option [value]="2">Javascript</option>
         </select>
       </div>
       <button (click)="submitForm(newTerm.value, newDefinition.value, newSection.value)">Add</button>
